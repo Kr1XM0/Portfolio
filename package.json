@@ -9,11 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource-variable/radio-canada-big": "^5.2.7",
-    "@lucide/astro": "^0.562.0",
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^6.1.5",
-    "astro-typewriter": "^1.1.0",
-    "tailwindcss": "^4.1.18"
+    "@fontsource-variable/radio-canada-big": "5.2.7",
+    "@lucide/astro": "0.562.0",
+    "@tailwindcss/vite": "4.1.18",
+    "astro": "6.1.5",
+    "astro-typewriter": "1.1.0",
+    "tailwindcss": "4.1.18"
   }
 }
