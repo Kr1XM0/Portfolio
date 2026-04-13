@@ -1,5 +1,5 @@
 ---
-import { BookText,FolderCode,User ,Mail} from '@lucide/astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <div class="max-w-3xl m-auto flex justify-center sticky top-5 z-20 max-sm:hidden">
@@ -7,22 +7,22 @@ import { BookText,FolderCode,User ,Mail} from '@lucide/astro';
     <a 
     href="#theme_toggle" 
     class="dark:text-good-white dark:hover:text-good-black dark:hover:bg-good-white hover:bg-good-black hover:text-good-white">
-    <User size={20} /> About Me
+    <Icon name="meteor-icons:user" size={20} /> About Me
     </a>
     <a 
     href="#Experience"
     class="dark:text-good-white dark:hover:text-good-black dark:hover:bg-good-white hover:bg-good-black hover:text-good-white">
-      <BookText size={20} />Experience
+      <Icon name="meteor-icons:book-open" size={20} /> Experience
     </a>
     <a 
     href="#Projects"
     class="dark:text-good-white dark:hover:text-good-black dark:hover:bg-good-white hover:bg-good-black hover:text-good-white">
-      <FolderCode size={20} />Projects
+      <Icon name="meteor-icons:folder" size={20} />Projects
     </a>
     <a 
     href="#Contact"
     class="dark:text-good-white dark:hover:text-good-black dark:hover:bg-good-white hover:bg-good-black hover:text-good-white">
-      <Mail size={20} />Contact
+      <Icon name="meteor-icons:envelope" size={20} />Contact
     </a>
   </div>
 </div>

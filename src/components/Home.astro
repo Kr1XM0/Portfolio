@@ -1,5 +1,6 @@
 ---
-import { MapPin, BriefcaseBusiness, MoveRight, Download, Github, Linkedin, Instagram, Facebook } from "@lucide/astro";
+import { Icon } from 'astro-icon/components';
+
 import Typewriter from "astro-typewriter";
 ---
 
@@ -22,17 +23,23 @@ import Typewriter from "astro-typewriter";
 
     <div class="flex flex-col ">
       <div class="flex gap-4 mb-5 dark:text-white">
-        <p class="flex items-center gap-1.5 mr-5"><MapPin /> Based in Cuba</p>
-        <p class="flex items-center gap-1.5 mr-5"><BriefcaseBusiness /> Avalible Now</p>
+        <p class="flex items-center gap-1.5 mr-5">
+          <Icon name="meteor-icons:location-dot" size={24} /> 
+          Based in Cuba 
+        </p>
+        <p class="flex items-center gap-1.5 mr-5">
+          <Icon name="meteor-icons:circle-check" size={24} /> 
+          Avalible Now
+        </p>
       </div>
 
       <div class="flex gap-4 mb-5">
         <a href="https://wa.me/+5356876345" target="_blank" class="flex items-center gap-1.5 py-2.5 px-4 rounded-xl border-2 max-sm:text-base transition-colors hover:text-white hover:bg-neutral-900 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white" >
-          <MoveRight />
+          <Icon name="meteor-icons:arrow-right-long" size={20} />
           Contact Me
         </a>
         <button onclick="window.open('/Cristian_Marrero_CV.pdf', '_blank')" class="flex cursor-pointer items-center gap-1.5 py-2.5 px-4 rounded-xl border-2 max-sm:text-base transition-colors hover:text-white hover:bg-neutral-900 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white" >
-          <Download size={22} /> 
+          <Icon name="meteor-icons:download" size={20} />
           Download CV
         </button>
       </div>
@@ -42,16 +49,16 @@ import Typewriter from "astro-typewriter";
     <div class="flex items-center gap-8 max-sm:gap-4 my-8 text-xl">
       <p class="dark:text-white">Follow Me:</p>
       <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://github.com/Kr1XM0">
-        <Github />
+          <Icon name="meteor-icons:github" size={24} /> 
       </a>
       <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://www.linkedin.com/in/cristian-marrero-82002a342">
-        <Linkedin />
+          <Icon name="meteor-icons:linkedin" size={24} /> 
       </a>
       <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://www.instagram.com/_krixd_">
-        <Instagram />
+          <Icon name="meteor-icons:instagram" size={24} /> 
       </a>
       <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://www.facebook.com/Kristian.Marrero0">
-        <Facebook />
+          <Icon name="meteor-icons:facebook" size={24} /> 
       </a>
     </div>
   </div>

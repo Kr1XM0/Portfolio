@@ -1,5 +1,5 @@
 ---
-import { Sun, Moon } from "@lucide/astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <!doctype html>
@@ -18,8 +18,8 @@ import { Sun, Moon } from "@lucide/astro";
       class="absolute flex gap-5 top-7 right-0 rounded-full p-2.5 shadow-xl dark:shadow-none border border-neutral-200/50 cursor-pointer"
     > 
     <span class="absolute bg-neutral-800 dark:bg-good-white dark:left-12.5 p-4 top-1.5 left-1.5 rounded-full -z-10 transition-all"></span>
-      <Sun class="text-white dark:text-black transition-all"/>
-      <Moon class="text-black transition-all" />
+      <Icon name="meteor-icons:sun" size={24} class="text-white dark:text-black transition-all"/>
+      <Icon name="meteor-icons:moon" size={24} class="text-black transition-all" />
     </button>
 		<slot />
 	</body>
