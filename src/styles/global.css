@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-good-black: #1E1E1E;
+  --color-good-white: #F5F5F5; 
+}
+
+* {
+  font-family: 'Radio Canada Big Variable', sans-serif;
+  scroll-behavior: smooth;
+}

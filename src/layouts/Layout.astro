@@ -1,0 +1,42 @@
+---
+import { Sun, Moon } from "@lucide/astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/global.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>Kr1x Portfolio</title>
+	</head>
+	<body id="body_id" class=`max-w-5xl bg-good-white dark:bg-good-black relative h-full w-full m-auto`>
+    <button
+      id="theme_toggle"
+      class="absolute flex gap-5 top-7 right-0 rounded-full p-2.5 shadow-xl dark:shadow-none border border-neutral-200/50 cursor-pointer"
+    > 
+    <span class="absolute bg-neutral-800 dark:bg-good-white dark:left-12.5 p-4 top-1.5 left-1.5 rounded-full -z-10 transition-all"></span>
+      <Sun class="text-white dark:text-black transition-all"/>
+      <Moon class="text-black transition-all" />
+    </button>
+		<slot />
+	</body>
+</html>
+
+<script>
+  const boton = document.getElementById("theme_toggle");
+  const body = document.getElementById("body_id");
+  let dark = false;
+  boton?.addEventListener("click", toggleTheme)
+  function toggleTheme() {
+    if (!dark) {
+      body?.classList.add("dark");
+      dark = true;
+    } else {
+      body?.classList.remove("dark");
+      dark = false;
+    }
+  }
+</script>

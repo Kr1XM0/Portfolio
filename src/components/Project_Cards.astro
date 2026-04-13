@@ -1,0 +1,33 @@
+---
+import { GithubIcon, Monitor } from "@lucide/astro";
+
+interface Props {
+  project_name: string;
+  project_description: string;
+  project_img: string;
+  technologies: string[];
+  github_url: string;
+  web_url: string;
+}
+
+const {project_name, project_description, project_img, technologies, github_url, web_url} = Astro.props
+---
+
+<div class="block max-w-md p-6 rounded-xl shadow-[0_0_20px_#00000030] dark:shadow-none dark:bg-neutral-800 dark:border dark:border-neutral-700/80">
+  <div class="w-full h-64 overflow-hidden rounded-xl">
+    <img class="object-cover w-full h-full" src={project_img} alt="" />
+  </div>
+  <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight dark:text-white">{project_name}</h5>
+  <p class="mb-6 dark:text-white">{project_description}</p>
+  <div class="flex flex-wrap gap-3">
+
+    {technologies.map(tech => 
+      <p class="bg-neutral-800 dark:bg-neutral-700 rounded-xl max-w-24 px-3.5 py-1 text-neutral-100/80 text-sm flex justify-center">{tech}</p>
+    )}
+      
+  </div>
+  <div class="flex mt-5 gap-3 justify-between">
+    <a href={github_url} target="_blank" class="border-2 w-1/2 py-2 rounded-2xl flex justify-center hover:text-white hover:bg-neutral-800 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white transition-colors "><GithubIcon /></a>
+    <a href={web_url} target="_blank" class="border-2 w-1/2 py-2 rounded-2xl flex justify-center hover:text-white hover:bg-neutral-800 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white transition-colors"><Monitor /></a>
+  </div>
+</div>

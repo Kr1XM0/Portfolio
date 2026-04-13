@@ -1,0 +1,84 @@
+---
+import { MapPin, BriefcaseBusiness, MoveRight, Download, Github, Linkedin, Instagram, Facebook } from "@lucide/astro";
+import Typewriter from "astro-typewriter";
+---
+
+<main class="flex justify-between items-center pt-24 max-sm:px-5">
+
+  <div class="w-1/2 max-sm:w-full">
+    
+    <div>
+      <h1 class="text-7xl dark:text-white">Hi, I'm Krix</h1>
+      <span class="text-4xl dark:text-white">
+        <Typewriter id="big"
+        messages={["Web Developer", "Digital Builder", "Logic Architect"]} 
+        waitWritten={3000}
+        />
+      </span>
+      <p class="my-5 text-pretty dark:text-white">I create beutiful function and user-centerd experiences. With 2+ 
+        years of experiences in web development
+      </p>
+    </div>
+
+    <div class="flex flex-col ">
+      <div class="flex gap-4 mb-5 dark:text-white">
+        <p class="flex items-center gap-1.5 mr-5"><MapPin /> Based in Cuba</p>
+        <p class="flex items-center gap-1.5 mr-5"><BriefcaseBusiness /> Avalible Now</p>
+      </div>
+
+      <div class="flex gap-4 mb-5">
+        <a href="https://wa.me/+5356876345" target="_blank" class="flex items-center gap-1.5 py-2.5 px-4 rounded-xl border-2 max-sm:text-base transition-colors hover:text-white hover:bg-neutral-900 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white" >
+          <MoveRight />
+          Contact Me
+        </a>
+        <button onclick="window.open('/Cristian_Marrero_CV.pdf', '_blank')" class="flex cursor-pointer items-center gap-1.5 py-2.5 px-4 rounded-xl border-2 max-sm:text-base transition-colors hover:text-white hover:bg-neutral-900 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white" >
+          <Download size={22} /> 
+          Download CV
+        </button>
+      </div>
+    </div>
+
+    <hr class="dark:text-white">
+    <div class="flex items-center gap-8 max-sm:gap-4 my-8 text-xl">
+      <p class="dark:text-white">Follow Me:</p>
+      <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://github.com/Kr1XM0">
+        <Github />
+      </a>
+      <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://www.linkedin.com/in/cristian-marrero-82002a342">
+        <Linkedin />
+      </a>
+      <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://www.instagram.com/_krixd_">
+        <Instagram />
+      </a>
+      <a class="bg-neutral-500/20 hover:bg-neutral-900 hover:text-white dark:text-white dark:hover:bg-neutral-200 dark:hover:text-black transition-colors p-2.5 rounded-lg" target="_blank" href="https://www.facebook.com/Kristian.Marrero0">
+        <Facebook />
+      </a>
+    </div>
+  </div>
+
+  <div id="group" class="relative max-w-sm max-sm:hidden h-80 ">
+    <img class="object-cover h-full w-full rounded-lg" src="/yo.webp" alt="" srcset="">
+  </div>
+  
+</main>
+
+<style>
+  #big::part(typewriter)::after {
+    width: 3px;
+    height: 1em;
+    z-index: 0;
+  }
+
+    #group::after {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: 40px;
+      right: -55px;
+      bottom: -55px;
+      border: 2px solid #6f6f6f;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      z-index: -1;
+    }
+</style>
