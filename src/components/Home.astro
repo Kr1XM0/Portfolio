@@ -38,7 +38,7 @@ import Typewriter from "astro-typewriter";
           <Icon name="meteor-icons:arrow-right-long" size={20} />
           Contact Me
         </a>
-        <button onclick="window.open(`${import.meta.env.BASE_URL}Cristian_Marrero_CV.pdf`, '_blank')" class="flex cursor-pointer items-center gap-1.5 py-2.5 px-4 rounded-xl border-2 max-sm:text-base transition-colors hover:text-white hover:bg-neutral-900 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white" >
+        <button onclick="window.open(`${import.meta.env.BASE_URL + 'Cristian_Marrero_CV.pdf'}`, '_blank')" class="flex cursor-pointer items-center gap-1.5 py-2.5 px-4 rounded-xl border-2 max-sm:text-base transition-colors hover:text-white hover:bg-neutral-900 dark:hover:text-black dark:hover:bg-white dark:text-white dark:border-white" >
           <Icon name="meteor-icons:download" size={20} />
           Download CV
         </button>
@@ -64,7 +64,7 @@ import Typewriter from "astro-typewriter";
   </div>
 
   <div id="group" class="relative max-w-sm max-sm:hidden h-80 ">
-    <img class="object-cover h-full w-full rounded-lg" src=`${import.meta.env.BASE_URL}yo.webp` alt="" srcset="">
+    <img class="object-cover h-full w-full rounded-lg" src=`${import.meta.env.BASE_URL + 'yo.webp'}` alt="" srcset="">
   </div>
   
 </main>
