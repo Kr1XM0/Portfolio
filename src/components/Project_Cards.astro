@@ -1,9 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
 interface Props {
   project_name: string;
   project_description: string;
-  project_img: string;
+  project_img: ImageMetadata;
   technologies: string[];
   github_url: string;
   web_url: string;
@@ -14,7 +15,9 @@ const {project_name, project_description, project_img, technologies, github_url,
 
 <div class="block max-w-md p-6 rounded-xl shadow-[0_0_20px_#00000030] dark:shadow-none dark:bg-neutral-800 dark:border dark:border-neutral-700/80">
   <div class="w-full h-64 overflow-hidden rounded-xl">
-    <img class="object-cover w-full h-full" src={project_img} alt="" />
+    <a href={web_url} target="_blank">
+      <Image src={project_img} class="object-cover w-full h-full" alt="project photo" >
+    </a>
   </div>
   <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight dark:text-white">{project_name}</h5>
   <p class="mb-6 dark:text-white">{project_description}</p>

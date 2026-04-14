@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
-
+import { Image } from 'astro:assets';
+import mePhoto from '../assets/yo.webp'
 import Typewriter from "astro-typewriter";
 ---
 
@@ -16,7 +17,7 @@ import Typewriter from "astro-typewriter";
         waitWritten={3000}
         />
       </span>
-      <p class="my-5 text-pretty dark:text-white">I create beutiful function and user-centerd experiences. With 2+ 
+      <p class="my-5 text-pretty dark:text-white">I create beautiful function and user-centered experiences. With 2+ 
         years of experiences in web development
       </p>
     </div>
@@ -64,7 +65,7 @@ import Typewriter from "astro-typewriter";
   </div>
 
   <div id="group" class="relative max-w-sm max-sm:hidden h-80 ">
-    <img class="object-cover h-full w-full rounded-lg" src='yo.webp' alt="" srcset="">
+    <Image src={mePhoto} alt="photo of me" loading="eager" decoding="async" class="object-cover h-full w-full rounded-lg">
   </div>
   
 </main>

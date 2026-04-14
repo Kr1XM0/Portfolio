@@ -1,5 +1,9 @@
 ---
 import ProjectCards from "./Project_Cards.astro";
+import QRProject from '../assets/QR.webp'
+import TimeProject from '../assets/SoliTime.webp'
+import UrlProject from '../assets/URL_Shortener.webp'
+import InvoiceProject from '../assets/InvoiceCreator.webp'
 ---
 
 <main id="Projects" class="w-full flex flex-col justify-center items-center pt-24">
@@ -13,7 +17,7 @@ import ProjectCards from "./Project_Cards.astro";
     <ProjectCards 
     project_name="URL Shortener"
     project_description="Personal link shortener available for community use, fast and easy"
-    project_img="URL_Shortener.webp"
+    project_img={UrlProject}
     technologies={["Express","Node.js","Postgress"]}
     github_url="https://github.com/Kr1XM0/ShortUrls-App"
     web_url="https://kut.fly.dev/"
@@ -22,7 +26,7 @@ import ProjectCards from "./Project_Cards.astro";
     <ProjectCards 
     project_name="SoliTime"
     project_description="Weather app with varied and timely information about the weather in your area"
-    project_img="SoliTime.webp"
+    project_img={TimeProject}
     technologies={["React","TailwindCSS"]}
     github_url="https://github.com/Kr1XM0/Weather_App"
     web_url="https://weather-app-jn5t.onrender.com/"
@@ -31,7 +35,7 @@ import ProjectCards from "./Project_Cards.astro";
     <ProjectCards 
     project_name="Invoice Creator App"
     project_description="A quick and effective solution for creating invoices for your business"
-    project_img="InvoiceCreator.webp"
+    project_img={InvoiceProject}
     technologies={["React","TailwindCSS"]}
     github_url="https://github.com/Kr1XM0/Invoice-Creator"
     web_url="https://uinvoic3.netlify.app/"
@@ -40,7 +44,7 @@ import ProjectCards from "./Project_Cards.astro";
     <ProjectCards 
     project_name="QR Code"
     project_description="Convert your URLs into QR codes and share them with your friends"
-    project_img="QR.webp"
+    project_img={QRProject}
     technologies={["JS","CSS","HTML"]}
     github_url="https://github.com/Kr1XM0/QRGenerator.github.io"
     web_url="https://kr1xm0.github.io/QRGenerator.github.io/"

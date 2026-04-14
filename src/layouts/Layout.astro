@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import mePhoto from '../assets/yo.webp';
 ---
 
 <!doctype html>
@@ -8,6 +9,7 @@ import { Icon } from 'astro-icon/components';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="preload" as="image" href={mePhoto.src} type="image/avif" />
     <link rel="stylesheet" href="/src/styles/global.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>Kr1x Portfolio</title>
