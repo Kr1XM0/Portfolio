@@ -2,7 +2,6 @@
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 import mePhoto from '../assets/yo.webp'
-import Typewriter from "astro-typewriter";
 ---
 
 <main class="flex justify-between items-center pt-24 max-sm:px-5">
@@ -11,10 +10,7 @@ import Typewriter from "astro-typewriter";
     <div>
       <h1 class="text-7xl dark:text-white">Hi, I'm Krix</h1>
       <span class="text-4xl dark:text-white">
-        <Typewriter id="big"
-        messages={["Web Developer", "Digital Builder", "Logic Architect"]} 
-        waitWritten={3000}
-        />
+        <span id="big" class="inline-block min-h-[1.2em]" aria-label="Web Developer, Digital Builder, Logic Architect"></span>
       </span>
       <p class="my-5 text-pretty dark:text-white">I create beautiful function and user-centered experiences. With 2+ 
         years of experiences in web development
@@ -69,13 +65,56 @@ import Typewriter from "astro-typewriter";
   
 </main>
 
-<style>
-  #big::part(typewriter)::after {
-    width: 3px;
-    height: 1em;
-    z-index: 0;
+<script>
+  const messages = ["Web Developer", "Digital Builder", "Logic Architect"];
+  const typeDelay = 80;
+  const eraseDelay = 40;
+  const waitWritten = 3000;
+  const waitErased = 400;
+
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+  async function run(el: HTMLElement) {
+    let i = 0;
+    while (true) {
+      const text = messages[i];
+
+      for (let c = 1; c <= text.length; c++) {
+        el.textContent = text.slice(0, c);
+        await sleep(typeDelay);
+      }
+
+      await sleep(waitWritten);
+
+      for (let c = text.length - 1; c >= 0; c--) {
+        el.textContent = text.slice(0, c);
+        await sleep(eraseDelay);
+      }
+
+      await sleep(waitErased);
+      i = (i + 1) % messages.length;
+    }
   }
 
+  const el = document.getElementById("big");
+  if (el) run(el);
+</script>
+
+<style>
+  #big::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 2px;
+  background: currentColor;
+  vertical-align: -0.1em;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
     #group::after {
       content: "";
       position: absolute;
