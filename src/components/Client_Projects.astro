@@ -1,0 +1,55 @@
+---
+import ProjectCards from "./Project_Cards.astro";
+import BoniveFit from '../assets/BoniveFit.png'
+import BoniveFit2 from '../assets/BoniveFit2.png'
+import MellVisual from '../assets/MellVisual.png'
+import MellVisual2 from '../assets/MellVisual2.png'
+import Vestido from '../assets/Vestido al Viento.png'
+import Vestido2 from '../assets/Vestido al Viento2.png'
+
+---
+
+<main id="ClientProjects" class="w-full flex flex-col justify-center items-center pt-24">
+  <div class="flex flex-col items-center">
+    <h2 class="text-5xl font-bold text-pretty dark:text-white">Featured Works</h2>
+    <p class="dark:text-neutral-200">A sample of some work I've done for clients </p>
+  </div>
+
+  <div class="flex flex-wrap gap-10 justify-center my-5 max-sm:px-5">
+
+    <ProjectCards
+    project_name="Vestido al Viento"
+    project_description="Design and development of a website showcasing flying dress photography sessions."
+    project_img={Vestido}
+    project_img_hover={Vestido2}
+    technologies={["HTML", "CSS", "JS"]}
+    web_url="https://mellvisuals.com/flyingdress/"
+    />
+
+    <ProjectCards
+    project_name="MellVisuals"
+    project_description="I developed this website for a client, focusing on a visually appealing design and smooth navigation"
+    project_img={MellVisual}
+    project_img_hover={MellVisual2}
+    technologies={["HTML", "CSS", "JS"]}
+    web_url="https://mellvisuals.com/paquetesquince/"
+    />
+
+    <ProjectCards
+    project_name="BoniveFitShop"
+    project_description="I built this Shopify store for a client, implementing a custom design and optimizing the user experience"
+    project_img={BoniveFit}
+    project_img_hover={BoniveFit2}
+    technologies={["Shopify", "CSS"]}
+    web_url="https://bonivefitshop.com/es/"
+    />
+
+    
+    </div>
+</main>
+
+<style>
+  .projects-header h2 {
+    font-size: 30px;
+  } 
+</style>
